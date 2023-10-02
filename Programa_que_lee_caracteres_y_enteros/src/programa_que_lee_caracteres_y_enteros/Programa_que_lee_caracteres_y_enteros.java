@@ -29,9 +29,11 @@ public class Programa_que_lee_caracteres_y_enteros {
         edad=Scan.nextInt();
         
     System.out.println("A QUE CLASE VAS?");
-  
+       clase= Scan.next().charAt(edad);
        
+          
        
+   
   
 
        
