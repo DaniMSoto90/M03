@@ -19,8 +19,11 @@ public class Ejercicio18 {
         Scanner sc = new Scanner(System.in);
        
       
-       double sueldo_normal, sueldo_total=0, sueldo_extra, h_normales=35, h_extra=0, tarifa_normal=20;
+       double sueldo_normal, sueldo_total=0, sueldo_extra, h_normales=35, h_extra, tarifa_normal=20, sueldo_con_impuestos, impuesto;
        double tarifa_extra = tarifa_normal * 1.5;
+       final int salario_sin_impuestos =500;
+       
+       
        
         System.out.println("Cuantas horas has trabajado?");
        int h_trabajadas= sc.nextInt();
@@ -39,10 +42,26 @@ public class Ejercicio18 {
             
         }
         
+        if (sueldo_total<=salario_sin_impuestos) {
+            System.out.println("tu sueldo esta libre de impuestos, y es "+sueldo_total+" euros");
+        }
+        
+        else if(sueldo_total>salario_sin_impuestos){
+            
+        sueldo_con_impuestos= sueldo_total - salario_sin_impuestos;
+        impuesto= sueldo_con_impuestos/100*25;
+        sueldo_total= sueldo_total -impuesto;
         
         
-        System.out.println("tu sueldo es "+sueldo_total+" euros");
+        System.out.println("tu sueldo con impuestos  es "+sueldo_total+" euros"+" tus impuestos son "+impuesto);
+         
+        }
+        
+        
+   
 
+        
+        
     }
     
 }
